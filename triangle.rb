@@ -1,7 +1,7 @@
 # Triangle Project Code.
 
 # Triangle analyzes the lengths of the sides of a triangle
-# (represented by a, b and c) and returns the type of triangle.
+# (represented by a, b and c) and returns the type of trianglexo.
 #
 # It returns:
 #   :equilateral  if all sides are equal
@@ -14,7 +14,15 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  raise TriangleError if ((a*b*c<=0) || (a+c <=b) || (a+b <=c) || (b+c <=a)) 
+                                      
+  if a==b&&b==c
+    :equilateral
+  elsif a==b|| a==c ||c==b
+    :isosceles
+  else
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
