@@ -64,7 +64,7 @@ class AboutSandwichCode < Neo::Koan
   # Now we write:
 
   def count_lines2(file_name)
-    file_sandwich(file_name) do |file|
+    file_sandwich(file_name) do |file| 
       count = 0
       while file.gets
         count += 1
